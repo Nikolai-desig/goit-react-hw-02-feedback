@@ -1,11 +1,12 @@
 import React from 'react';
 import Feedback from './ToDo/Feedback';
+import css from './App.module.css';
 
 const App = () => {
   return (
-    <div>
-      <h2>Please leave feedback</h2>
-      <Feedback/>
+    <div className={css.container}>
+      <h2 className={css.title}>Please leave feedback</h2>
+      <Feedback />
     </div>
   );
 };
