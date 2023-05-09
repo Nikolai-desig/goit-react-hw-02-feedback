@@ -11,6 +11,8 @@
 
 .button:hover,
 .button:focus {
-  background: #ffffff;
+    border: none;
+    border-radius: 5px;
+  background: #e7e6e6;
   box-shadow: 5px 5px 7px #e8e8e8, -5px -5px 7px #ffffff;
 }
