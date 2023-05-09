@@ -10,26 +10,11 @@ class Feedback extends Component {
     bad: 0,
   };
 
-  handleGood = () => {
+  handleFeedback = option => {
     this.setState(prevState => {
       return {
-        good: prevState.good + 1,
-      };
-    });
-  };
-
-  handleNeutral = () => {
-    this.setState(prevState => {
-      return {
-        neutral: prevState.neutral + 1,
-      };
-    });
-  };
-
-  handleBad = () => {
-    this.setState(prevState => {
-      return {
-        bad: prevState.bad + 1,
+        ...prevState,
+        [option]: prevState[option] + 1,
       };
     });
   };
@@ -45,9 +30,8 @@ class Feedback extends Component {
     return (
       <div>
         <FeedbackOptions
-          onHandleGood={this.handleGood}
-          onHandleNeutral={this.handleNeutral}
-          onHandleBad={this.handleBad}
+          onLeaveFeedback={this.handleFeedback}
+          options={['good', 'neutral', 'bad']}
         />
         <h2>Statistics</h2>
 
